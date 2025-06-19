@@ -46,7 +46,7 @@ export async function fetchPrograms(): Promise<Program[]> {
 }
 
 export async function fetchProgramForm(programId: number): Promise<ProgramForm> {
-  const res = await fetch(prefixBaseApiPath(`/form/${programId}`));
+  const res = await fetch(prefixBaseApiPath(`/common/form/${programId}`));
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
@@ -55,7 +55,7 @@ export async function fetchProgramForm(programId: number): Promise<ProgramForm> 
   return data;
 }
 export async function PutProgramForm(programId: number, submissionData: any): Promise<ProgramRegistrantInfo> {
-  const url = prefixBaseApiPath(`/form/${programId}`);
+  const url = prefixBaseApiPath(`/common/form/${programId}`);
   const res = await fetch(url, {
     method: "PUT",
     headers: {
@@ -73,7 +73,7 @@ export async function PutProgramForm(programId: number, submissionData: any): Pr
 }
 
 export async function SubmitForm(programId: number, submissionData: any): Promise<ProgramRegistrantInfo> {
-  const url = prefixBaseApiPath(`/form/${programId}/submit`);
+  const url = prefixBaseApiPath(`/common/form/${programId}/submit`);
 
   const res = await fetch(url, {
     method: "POST",
