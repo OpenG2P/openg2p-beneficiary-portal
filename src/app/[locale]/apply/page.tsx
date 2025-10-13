@@ -81,7 +81,7 @@ export default function Apply() {
           letterSpacing: "0px",
           color: "#484848",
           opacity: "1",
-          marginLeft: "22px",
+          marginLeft: "0px",
         }}
       >
         {t("Application Form")}
@@ -103,7 +103,7 @@ export default function Apply() {
             letterSpacing: "0px",
             color: "#494DAF",
             opacity: "1",
-            marginLeft: "22px",
+            marginLeft: "0px",
             marginRight: "10px",
           }}
         >
